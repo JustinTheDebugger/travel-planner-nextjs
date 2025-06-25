@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 const TripsPage = async () => {
@@ -19,7 +20,9 @@ const TripsPage = async () => {
       <div>
         <h1> Dashboard</h1>
       </div>
-      <Button>New Trip</Button>
+      <Link href={"/trips/new"}>
+        <Button>New Trip</Button>
+      </Link>
     </div>
   );
 };
