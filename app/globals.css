@@ -71,4 +71,12 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* === Tab Trigger Styles ===
+   Reused for each <TabsTrigger> component
+   - Sets font size and cursor behavior
+*/
+  .tab-trigger {
+    @apply text-lg cursor-pointer;
+  }
 }

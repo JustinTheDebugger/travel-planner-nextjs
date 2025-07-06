@@ -27,6 +27,19 @@ Building a beautiful Travel Planner Website using NextJS, Prisma, Neon, Google M
 - Styling: Tailwind CSS
 - Deployment: Vercel
 
+## Other Information
+
+```plaintext
+1. Create tables in db at neon
+npx prisma migrate dev
+
+2. Creates Prisma client
+npx prisma generate
+
+3. Geocode integration
+https://developers.google.com/maps/documentation/geocoding/requests-geocoding
+```
+
 ## 🔗 Live Site
 
 [View Live Website](https://www.justintay.com)
