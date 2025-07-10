@@ -1,4 +1,5 @@
 import { Location } from "@/app/generated/prisma";
+import { reorderItineary } from "@/lib/actions/reorder-itinerary";
 import { DndContext, closestCenter, DragEndEvent } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -51,6 +52,11 @@ const SortableItinerary = ({ locations, tripId }: SortableItineraryProps) => {
       ).map((item, index) => ({ ...item, order: index }));
 
       setLocalLocation(newLocationsOrder);
+
+      await reorderItineary(
+        tripId,
+        newLocationsOrder.map((item) => item.id)
+      );
     }
   };
 
