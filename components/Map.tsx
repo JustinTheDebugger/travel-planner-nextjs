@@ -1,3 +1,5 @@
+"use client";
+
 import { Location } from "@/app/generated/prisma";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 
@@ -8,13 +10,15 @@ interface MapProps {
 const Map = ({ itineraries }: MapProps) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey) {
-    return <div>Map not available (API key disabled)</div>;
-  }
-
+  // Call the hook unconditionally, even if the API key is missing
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: apiKey!,
   });
+
+  // Now conditionally handle cases
+  if (!apiKey) {
+    return <div>Map not available (API key disabled)</div>;
+  }
 
   if (loadError) return <div>Error loading maps</div>;
 
