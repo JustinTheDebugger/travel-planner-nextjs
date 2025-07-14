@@ -1,24 +1,25 @@
-# 🌐 My Portfolio Website
+# Travel Planner Application
 
-Building a beautiful Travel Planner Website using NextJS, Prisma, Neon, Google Maps and PostgreSQL.
+This is a project to build a FullStack Travel Planner App With NextJS, Google Maps, PostgreSQL (Neon Postgres)
 
 ## 🚀 Features
 
-- Built with [Next.js](https://nextjs.org/)
-- Fully responsive and mobile-friendly
-- SEO optimized with meta tags and Open Graph support
+- A beautiful landing page
+
+- User dashboard to create, edit, and manage trip and its itinerary
+
+- User dashboard to track trip itinerary
+
+- Course Structure with Drag & Drop
+
+- Neon Postgres DB
+
+- Prisma ORM
 
 ## 📁 Folder Structure
 
 ```plaintext
-.
-├── app/ # Application routes and layout (Next.js App Router)
-├── components/
-├── node_modules/ # Project dependencies
-├── public/ # Static assets accessible via URL
-├── README.md # Project overview and documentation
-├── package.json # Project metadata and scripts
-└── next.config.js # Next.js configuration
+
 ```
 
 ## 🛠️ Tech Stack
@@ -27,22 +28,9 @@ Building a beautiful Travel Planner Website using NextJS, Prisma, Neon, Google M
 - Styling: Tailwind CSS
 - Deployment: Vercel
 
-## Other Information
-
-```plaintext
-1. Create tables in db at neon
-npx prisma migrate dev
-
-2. Creates Prisma client
-npx prisma generate
-
-3. Geocode integration
-https://developers.google.com/maps/documentation/geocoding/requests-geocoding
-```
-
 ## 🔗 Live Site
 
-[View Live Website](https://www.justintay.com)
+[View Live Portfolio](https://www.justintay.com/project/lms-app)
 
 ## 📸 Screenshots
 
