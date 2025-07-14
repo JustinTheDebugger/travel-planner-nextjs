@@ -4,11 +4,11 @@ import { prisma } from "@/lib/prisma";
 import React from "react";
 
 interface TripDetailProps {
-  params: { tripId: string };
+  params: Promise<{ tripId: string }>;
 }
 
 const TripDetail = async ({ params }: TripDetailProps) => {
-  const { tripId } = params;
+  const { tripId } = await params;
 
   const session = await auth();
 
