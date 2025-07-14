@@ -3,14 +3,12 @@ import TripDetailClient from "@/components/TripDetailClient";
 import { prisma } from "@/lib/prisma";
 import React from "react";
 
-type TripDetailProps = {
-  params: {
-    tripId: string;
-  };
-};
+interface TripDetailProps {
+  params: { tripId: string };
+}
 
 const TripDetail = async ({ params }: TripDetailProps) => {
-  const { tripId } = await params;
+  const { tripId } = params;
 
   const session = await auth();
 
