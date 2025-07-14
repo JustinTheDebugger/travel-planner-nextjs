@@ -9,16 +9,20 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+/** @type {import("eslint").Linter.FlatConfig[]} */
+export default [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    ignores: ["app/generated/**"],
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.d.ts"],
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": "off", // allows {}
       "react/no-unescaped-entities": "off",
     },
   },
 ];
-
-export default eslintConfig;
