@@ -16,23 +16,20 @@ This is a project to build a FullStack Travel Planner App With NextJS, Google Ma
 
 - Prisma ORM
 
-## 📁 Folder Structure
-
-```plaintext
-
-```
-
 ## 🛠️ Tech Stack
 
 - Framework: [Next.js](https://nextjs.org/)
 - Styling: Tailwind CSS
 - Deployment: Vercel
+- Database: Neon Postgres
 
 ## 🔗 Live Site
 
-[View Live Portfolio](https://www.justintay.com/project/lms-app)
+[View Live Portfolio](https://travel-planner-nextjs.vercel.app/)
 
 ## 📸 Screenshots
+
+![alt text](image.png)
 
 ## 📬 Contact
 
